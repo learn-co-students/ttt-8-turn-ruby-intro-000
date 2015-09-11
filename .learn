@@ -1,5 +1,7 @@
 tags:
-  - tag1
+  - method composition
+  - recursion
+  - tictactoe
 languages:
-  - language1
+  - ruby
 resources: 0
