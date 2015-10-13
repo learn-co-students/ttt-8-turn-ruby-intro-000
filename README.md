@@ -60,7 +60,7 @@ Start with building those methods (or copying code you might have written before
 
 You'll then need to build your `#turn` method. Before building a full turn method according to the failing tests, let's setup a quick CLI so that you can watch your turn method perform as you build, visually confirming it behaves as expected.
 
-Open `bin/turn`, you'll see that it is already setup with `#!/usr/bin/env ruby` so you can execute it by running `./bin/turn` or `ruby bin/turn.rb` from your terminal. It currently does nothing (because it has no code), but try it out just for fun.
+Open `bin/turn`, you'll see that it is already setup with `#!/usr/bin/env ruby` so you can execute it by running `./bin/turn` or `ruby bin/turn` from your terminal. It currently does nothing (because it has no code), but try it out just for fun.
 
 The purpose of this file is to execute a turn of tic tac toe. The first thing it needs to do is load our library of methods defined in `lib/turn.rb`.
 
@@ -139,7 +139,7 @@ Add to `lib/turn.rb`
 
 ```ruby
 def turn(board)
-  "Please enter 1-9:"
+  puts "Please enter 1-9:"
 end
 ```
 
