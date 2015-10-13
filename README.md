@@ -48,7 +48,7 @@ Should accept a board as an argument and print out the current state of the boar
 
 Should accept a board and a position from the user (remember that the user will input a number 1-9 but your board is *really* indexed 0-8) and return true if the position is within the correct range of 1-9 and is currently unoccupied by an X or O token.
 
-**Hint: While not explicitly required by this lab, you might want to encapsulate the logic to check if a position is occupied in it's own method, perhaps `#position_taken?`**
+**Hint: While not explicitly required by this lab, you might want to encapsulate the logic to check if a position is occupied in its own method, perhaps `#position_taken?`**
 
 #### `#move`
 
