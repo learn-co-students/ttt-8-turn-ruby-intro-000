@@ -103,7 +103,7 @@ display_board(board)
 
 Notice how we evoke the `#display_board` method defined in lib/turn, passing the local board data into it via an argument on the last line.
 
-Now let's run this CLI: `bin/turn` or `ruby bin/turn.rb` from your terminal. You should see:
+Now let's run this CLI: `bin/turn` or `ruby bin/turn` from your terminal. You should see:
 
 ```
 $ ./bin/turn
