@@ -183,7 +183,7 @@ The tests will pass once you have your CLI working right, but don't be scared of
 
 ### Conclusion
 
-Once you define `#turn` as specific by the tests in `spec/turn_spec.rb`, your CLI should work for a turn of Tic Tac Toe and running it should yield:
+Once you define `#turn` as specified by the tests in `spec/turn_spec.rb`, your CLI should work for a turn of Tic Tac Toe and running it should yield:
 
 ```
 $ ./bin/turn
