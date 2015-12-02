@@ -401,3 +401,5 @@ Please enter 1-9:
 Another issue, besides only marking Xs as described above, is that the game played way too many turns! We need it to know how to quit if someone wins.
 
 Even with these deficiencies, this `#turn` method means you are very close to building a complete Tic Tac Toe. Get excited!
+
+<a href='https://learn.co/lessons/ttt-8-turn' data-visibility='hidden'>View this lesson on Learn.co</a>
