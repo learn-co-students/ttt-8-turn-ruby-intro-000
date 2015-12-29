@@ -48,7 +48,7 @@ Should accept a board as an argument and print out the current state of the boar
 
 Should accept a board and a position from the user (remember that the user will input a number 1-9 but your board is *really* indexed 0-8) and return true if the position is within the correct range of 1-9 and is currently unoccupied by an X or O token.
 
-**Hint: While not explicitly required by this lab, you might want to encapsulate the logic to check if a position is occupied in it's own method, perhaps `#position_taken?`**
+**Hint: While not explicitly required by this lab, you might want to encapsulate the logic to check if a position is occupied in its own method, perhaps `#position_taken?`**
 
 #### `#move`
 
@@ -60,7 +60,7 @@ Start with building those methods (or copying code you might have written before
 
 You'll then need to build your `#turn` method. Before building a full turn method according to the failing tests, let's setup a quick CLI so that you can watch your turn method perform as you build, visually confirming it behaves as expected.
 
-Open `bin/turn`, you'll see that it is already setup with `#!/usr/bin/env ruby` so you can execute it by running `./bin/turn` or `ruby bin/turn.rb` from your terminal. It currently does nothing (because it has no code), but try it out just for fun.
+Open `bin/turn`, you'll see that it is already setup with `#!/usr/bin/env ruby` so you can execute it by running `./bin/turn` or `ruby bin/turn` from your terminal. It currently does nothing (because it has no code), but try it out just for fun.
 
 The purpose of this file is to execute a turn of tic tac toe. The first thing it needs to do is load our library of methods defined in `lib/turn.rb`.
 
@@ -103,7 +103,7 @@ display_board(board)
 
 Notice how we evoke the `#display_board` method defined in lib/turn, passing the local board data into it via an argument on the last line.
 
-Now let's run this CLI: `bin/turn` or `ruby bin/turn.rb` from your terminal. You should see:
+Now let's run this CLI: `bin/turn` or `ruby bin/turn` from your terminal. You should see:
 
 ```
 $ ./bin/turn
@@ -139,11 +139,11 @@ Add to `lib/turn.rb`
 
 ```ruby
 def turn(board)
-  "Please enter 1-9:"
+  puts "Please enter 1-9:"
 end
 ```
 
-Let's run the CLI now: `bin/turn` or `ruby bin/turn.rb` from your terminal. You should see:
+Let's run the CLI now: `bin/turn` or `ruby bin/turn` from your terminal. You should see:
 
 ```
 $ ./bin/turn
@@ -183,7 +183,7 @@ The tests will pass once you have your CLI working right, but don't be scared of
 
 ### Conclusion
 
-Once you define `#turn` as specific by the tests in `spec/turn_spec.rb`, your CLI should work for a turn of Tic Tac Toe and running it should yield:
+Once you define `#turn` as specified by the tests in `spec/turn_spec.rb`, your CLI should work for a turn of Tic Tac Toe and running it should yield:
 
 ```
 $ ./bin/turn
