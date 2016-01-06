@@ -22,7 +22,7 @@ def turn(board)
   if valid_move?(board, input)
     move(board, input)
   else
-    turn(board)
+    turn(board) and return
   end
   display_board(board)
 end
