@@ -15,9 +15,8 @@ A turn of Tic Tac Toe is composed of the following routine:
 
 1. Asking the user for their move by position 1-9.
 2. Receiving the user input.
-3. If the move is valid, make the move.
+3. If the move is valid, make the move and display the board to the user.
 4. If the move is invalid, ask for a new move until a valid move is received.
-5. Display the board after the valid move has been made.
 
 All these procedures will be wrapped into our `#turn` method. However, the majority of the logic for these procedures will be defined and encapsulated in individual methods (some of which you may have built previously).
 
@@ -28,10 +27,10 @@ ask for input
 get input
 if input is valid
   make the move for input
+  show the board
 else
   ask for input again until you get a valid input
 end
-show the board
 ```
 
 ## Instructions
@@ -175,7 +174,7 @@ Asking for input again is the hard part. We either need a mechanism to repeat th
 
 Calling a method from within itself is totally okay in programming, in fact, it is an elegant solution to some complex problems. **Recursion** is the repeated application of the same procedure. [Google it](https://www.google.com/search?q=recursion&oq=recursion&aqs=chrome..69i57j69i60l3j69i65l2.1630j0j1&sourceid=chrome&es_sm=119&ie=UTF-8) **there's an easter egg from Google developers on that page, can you find it?**
 
-If you are familiar with loops, that is a totally acceptable solution to the input validation problem as well.
+As you are already familiar with loops, that is a totally acceptable solution to the input validation problem as well.
 
 As you try to get it working, keep playing with `bin/turn` until it works as expected, endlessly asking you for a valid turn input. If you ever need to exit the CLI without giving an input, just hit `CTRL+C` (sometimes `ALT+C` or `COMMAND+C`).
 
@@ -401,5 +400,3 @@ Please enter 1-9:
 Another issue, besides only marking Xs as described above, is that the game played way too many turns! We need it to know how to quit if someone wins.
 
 Even with these deficiencies, this `#turn` method means you are very close to building a complete Tic Tac Toe. Get excited!
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-8-turn' title='Building a Tic Tac Toe Turn'>Building a Tic Tac Toe Turn</a> on Learn.co and start learning to code for free.</p>
