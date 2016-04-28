@@ -21,10 +21,10 @@ def turn(board)
   input = gets.strip
   if valid_move?(board, input)
     move(board, input)
+    display_board(board)
   else
-    turn(board) and return
+    turn(board)
   end
-  display_board(board)
 end
 
 def position_taken?(board, location)
