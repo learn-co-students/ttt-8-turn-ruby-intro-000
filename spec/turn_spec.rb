@@ -28,25 +28,25 @@ describe './lib/turn.rb' do
   end
 
   describe '#valid_move?' do
-    it 'returns true/false based on position' do
+    it 'returns true/false based on index' do
       board = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
 
-      position = "1"
-      expect(valid_move?(board, position)).to be_truthy
+      index = 0
+      expect(valid_move?(board, index)).to be_truthy
 
-      position = "5"
-      expect(valid_move?(board, position)).to be_falsey
+      index = 4
+      expect(valid_move?(board, index)).to be_falsey
 
-      position = "invalid"
-      expect(valid_move?(board, position)).to be_falsey
+      index = -1
+      expect(valid_move?(board, index)).to be_falsey
     end
   end
 
   describe '#move' do
     it 'allows "X" player in the bottom right and "O" in the top left ' do
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-      move(board, 1, "O")
-      move(board, 9, "X")
+      move(board, 0, "O")
+      move(board, 8, "X")
 
       expect(board).to eq(["O", " ", " ", " ", " ", " ", " ", " ", "X"])
     end
@@ -77,7 +77,7 @@ describe './lib/turn.rb' do
       allow($stdout).to receive(:puts)
 
       expect(self).to receive(:gets).and_return("1")
-      expect(self).to receive(:valid_move?).with(board, "1").and_return(true)
+      expect(self).to receive(:valid_move?).with(board, 0).and_return(true)
 
       turn(board)
     end
