@@ -15,8 +15,9 @@ A turn of Tic Tac Toe is composed of the following routine:
 
 1. Asking the user for their move by position 1-9.
 2. Receiving the user input.
-3. If the move is valid, make the move and display the board to the user.
-4. If the move is invalid, ask for a new move until a valid move is received.
+3. Convert position to an index.
+4. If the move is valid, make the move and display the board to the user.
+5. If the move is invalid, ask for a new move until a valid move is received.
 
 All these procedures will be wrapped into our `#turn` method. However, the majority of the logic for these procedures will be defined and encapsulated in individual methods (some of which you may have built previously).
 
@@ -25,8 +26,9 @@ You can imagine the pseudocode for the `#turn` method:
 ```
 ask for input
 get input
-if input is valid
-  make the move for input
+convert input to index
+if index is valid
+  make the move for index
   show the board
 else
   ask for input again until you get a valid input
@@ -45,13 +47,13 @@ Should accept a board as an argument and print out the current state of the boar
 
 #### `#valid_move?`
 
-Should accept a board and a position from the user (remember that the user will input a number 1-9 but your board is *really* indexed 0-8) and return true if the position is within the correct range of 1-9 and is currently unoccupied by an X or O token.
+Should accept a board and an index from the user and return true if the index is within the correct range of 0-8 and is currently unoccupied by an X or O token.
 
 **Hint: While not explicitly required by this lab, you might want to encapsulate the logic to check if a position is occupied in its own method, perhaps `#position_taken?`**
 
 #### `#move`
 
-This method should accept a board, a position from the user (which will be in the 1-9 format), and a token to mark that position with (you can give that argument a default value of 'X'––we're not worrying about whose turn it is yet). The method should set the correct index value of that position within the board equal to the token.
+This method should accept a board, an index from the user (which was converted from their raw input with `input_to_index`), and a token to mark that position with (you can give that argument a default value of 'X'––we're not worrying about whose turn it is yet). The method should set the correct index value of that position within the board equal to the token.
 
 ### Workflow
 
@@ -163,7 +165,8 @@ The hard part of the turn method is figuring out how to handle invalid input. We
 
 ```
 get input
-if input is valid
+convert input to index
+if index is valid
   make the move for input
 else
   ask for input again until you get a valid input
@@ -231,15 +234,15 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 puts "Welcome to Tic Tac Toe!"
 
-move(board, "5", "X")
-move(board, "1", "O")
+move(board, 4, "X")
+move(board, 0, "O")
 
 display_board(board)
 
 turn(board)
 ```
 
-Notice that before the game even really starts, we hard code an execution of two moves, X to the middle position ("5"), and O to the top left ("1").
+Notice that before the game even really starts, we hard code an execution of two moves, X to the middle position (4), and O to the top left (0).
 
 When we run the CLI, we'd see:
 
@@ -267,9 +270,9 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 puts "Welcome to Tic Tac Toe!"
 
-move(board, "5", "X")
-move(board, "1", "O")
-move(board, "2", "X")
+move(board, 4, "X")
+move(board, 0, "O")
+move(board, 1, "X")
 
 display_board(board)
 
@@ -394,7 +397,7 @@ Please enter 1-9:
  X | X | X
 -----------
  X | X | X
- 
+
 ```
 
 Another issue, besides only marking Xs as described above, is that the game played way too many turns! We need it to know how to quit if someone wins.
