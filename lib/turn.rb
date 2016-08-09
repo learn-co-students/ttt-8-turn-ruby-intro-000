@@ -7,19 +7,19 @@ def display_board(board)# Define display_board that accepts a board and prints
 end
 def position_taken?(board,index)
   if board.size == 9
-    if  board[index]==" " || board[index]=="" || board[index]== nil
-    false
-    else
+    if  board[index]=="X" || board[index]=="O"
     true
+    else
+    false
     end
   end
 end
 def valid_move?(board,index)
   if index.between?(0,8)
-      if position_taken?(board,index)== false || position_taken?(board,index)== nil
-      true
-    else
+      if position_taken?(board,index)== true
       false
+    else
+      true
     end
   end
 end
