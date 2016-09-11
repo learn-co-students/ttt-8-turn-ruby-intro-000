@@ -33,10 +33,10 @@ def move(board, index, value="X")
 
 end
 
-def gets(user_input)
-  user_input = gets.strip
+# def gets(user_input)
+#   user_input = gets.strip
 
-end
+#end
 
 
 def turn(board)
