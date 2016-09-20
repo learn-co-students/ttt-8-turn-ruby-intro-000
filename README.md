@@ -406,4 +406,3 @@ Even with these deficiencies, this `#turn` method means you are very close to bu
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-8-turn' title='Building a Tic Tac Toe Turn'>Building a Tic Tac Toe Turn</a> on Learn.co and start learning to code for free.</p>
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/ttt-8-turn'>Tic Tac Toe Turn</a> on Learn.co and start learning to code for free.</p>
