@@ -72,7 +72,7 @@ Edit `bin/turn`:
 require_relative '../lib/turn'
 ```
 
-By adding `require_relative '../lib/turn'` we are telling Ruby to load a file from a relative path to the current file. Since we're in `bin` we have to go up a directory and into `lib` to find `turn.rb`, thus the path `../lib/turn`. **You never need to give the .rb extension to a path for require_relative, Ruby assumes you mean a .rb file.**
+By adding `require_relative '../lib/turn'` we are telling Ruby to load a file from a relative path to the current file. Since we're in `bin` we have to go up a directory and into `lib` to find `turn.rb`, thus the path `../lib/turn`. **You never need to give the .rb extension to a path for require_relative. Ruby assumes you mean a .rb file.**
 
 Next, the CLI needs to setup the data required to play a game of Tic Tac Toe, namely, the `board` variable to store the array we use to keep track of the state of the board.
 
@@ -405,3 +405,5 @@ Another issue, besides only marking Xs as described above, is that the game play
 Even with these deficiencies, this `#turn` method means you are very close to building a complete Tic Tac Toe game. Get excited!
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-8-turn' title='Building a Tic Tac Toe Turn'>Building a Tic Tac Toe Turn</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ttt-8-turn'>Tic Tac Toe Turn</a> on Learn.co and start learning to code for free.</p>
