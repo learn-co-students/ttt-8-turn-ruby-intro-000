@@ -10,16 +10,16 @@ def input_to_index(user_input)
   user_input = (user_input.to_i) - 1
 end
 
-def valid_move?(board, user_input)
-  if user_input >= 0 && user_input <= 8 && board[user_input] == " "
-      true
-      board[user_input] = "X"
-  		display_board(board)
-  else
-      false
-      "#{user_input + 1} in a invalid option."
-      turn(board)
-  end
+def valid_move?(board, index)
+	if index.between?(0, 8)
+		if !position_taken?(board, index)
+			true
+		else
+			false
+		end
+	else
+    false
+	end
 end
 
 def position_taken?(board, index)
@@ -36,8 +36,14 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets.strip
-  user_input = input_to_index(user_input)
+  input = gets.strip
+  index = input_to_index(input)
 
- 	valid_move?(board, user_input)
+  if valid_move?(board, index)
+    move(board, index)
+    display_board(board)
+  else
+    puts "invalid"
+    turn(board)
+  end
 end
