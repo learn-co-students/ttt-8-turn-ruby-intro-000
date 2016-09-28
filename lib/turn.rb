@@ -1,4 +1,4 @@
-# Helper methods go here
+# Helper methods start:
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -26,6 +26,7 @@ end
 def move(board, index, player = "X")
   board[index] = player
 end
+# Helper methods end:
 
 def turn(board)
   puts "Please enter 1-9:"
