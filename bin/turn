@@ -1,1 +1,25 @@
 #!/usr/bin/env ruby
+
+require_relative '../lib/turn.rb'
+
+board = Array.new(9, " ") #or board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+puts "Welcome to Tic Tac Toe!"
+puts "Current Board"
+puts ""
+display_board(board)
+puts ""
+puts "Where would you like to go ?"
+puts ""
+
+turn(board)
+
+input = gets.strip
+index = input_to_index(input)
+
+position_taken?(board, index)
+
+move(board, index)
+
+puts ""
+display_board(board)
