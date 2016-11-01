@@ -6,6 +6,16 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+# code your #valid_move? method here
+def valid_move?(board, index)
+  if board[index] == " " || board[index] == "" || board[index] == nil && index == (0..8)
+  true
+  else
+  false
+  end
+end
+
+
 def turn(board)
   puts "Please enter 1-9:"
   index = input_to_index(input)
@@ -33,15 +43,21 @@ def position_taken?(board, index)
 #  false : true
 end
 
-# code your #valid_move? method here
-def valid_move?(board, index)
-  if board[index] == " " || board[index] == "" || board[index] == nil && index == (0..8)
-  true
-  else
-  false
-  end
-end
+
 
 #  board[index] == " " || board[index] == "" || board[index] == nil && index == (0..8)?
 #  true : false
 #end
+
+input = gets.strip
+index = input_to_index(input)
+
+position_taken?(board, index)
+if position_taken?(board, index)
+  puts "invalid"
+  puts "Where would you like to go ?"
+  input = gets.strip
+  index = input_to_index(input)
+else
+  move(board, index)
+end

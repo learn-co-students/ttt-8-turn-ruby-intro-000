@@ -14,12 +14,5 @@ puts ""
 
 turn(board)
 
-input = gets.strip
-index = input_to_index(input)
-
-position_taken?(board, index)
-
-move(board, index)
-
 puts ""
 display_board(board)
