@@ -19,7 +19,8 @@ end
 # position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
 
 def valid_move?(board, index)
-  index != (-1) && index != (-2) && index != (-3) && index != (-4) && index != (-5) && index != (-6) && index != (-7) && index != (-8) && index != (-9) && board[index] == " " || board[index] == "" || board[index] == nil && index == (0..8)?
+#  index != (-1) && index != (-2) && index != (-3) && index != (-4) && index != (-5) && index != (-6) && index != (-7) && index != (-8) && index != (-9) && board[index] == " " || board[index] == "" || board[index] == nil && index == (0..8)?
+  board[index] == " " || board[index] == "" || board[index] == nil && index > (-1) && index == (0..8)?
   true : false
   #if board[index] == " " || board[index] == "" || board[index] == nil && index == (0..8)
   #true
@@ -45,7 +46,3 @@ end
 def move(board, index, current_player = "X")
   board[index] = current_player
 end
-
-#def position_taken?(board, location)
-# board[location] != " "
-#end
