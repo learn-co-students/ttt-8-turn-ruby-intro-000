@@ -10,23 +10,10 @@ def input_to_index(input) #(user_input)
   input.to_i - 1          #user_input.to_i - 1
 end
 
-#def valid_move?(board, position)
-#  if position.to_i.between?(1,9)
-#  if !position_taken?(board, position.to_i-1)
-#  TRUE
-#  end
-#   end
-# position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
-
 def valid_move?(board, index)
-#  index != (-1) && index != (-2) && index != (-3) && index != (-4) && index != (-5) && index != (-6) && index != (-7) && index != (-8) && index != (-9) && board[index] == " " || board[index] == "" || board[index] == nil && index == (0..8)?
-  board[index] == " " || board[index] == "" || board[index] == nil && index > (-1) && index == (0..8)?
+  index != (-1) && index != (-2) && index != (-3) && index != (-4) && index != (-5) && index != (-6) && index != (-7) && index != (-8) && index != (-9) && board[index] == " " || board[index] == "" || board[index] == nil && index == (0..8)?
+  #board[index] == " " || board[index] == "" || board[index] == nil && index > (-1) && index == (0..8)?
   true : false
-  #if board[index] == " " || board[index] == "" || board[index] == nil && index == (0..8)
-  #true
-  #else
-  #false
-  #end
 end
 
 def turn(board)
@@ -40,7 +27,7 @@ def turn(board)
  turn(board)
  end
  puts ""
- #display_board(board)
+ display_board(board)
 end
 
 def move(board, index, current_player = "X")
