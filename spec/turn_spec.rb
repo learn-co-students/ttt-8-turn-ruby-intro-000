@@ -150,6 +150,6 @@ describe './lib/turn.rb' do
       expect(output).to include("   | X |   ")
       expect(output).to include("-----------")
       expect(output).to include("   |   |   ")
-    end
+  end
   end
 end
