@@ -14,5 +14,5 @@ puts ""
 
 turn(board)
 
-puts ""
+#puts "Good stuff"
 display_board(board)
