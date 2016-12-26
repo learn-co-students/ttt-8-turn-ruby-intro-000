@@ -16,16 +16,8 @@ def valid_move?(board, index)
   end
 end
 
-def invalid_move(board, index)
-  puts "That is not a valid move. Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  valid_move?(board, index)
-end
-
 def move(board, index, value = "X")
     board[index] = value
-    return board
 end
 
 def get_input
