@@ -50,6 +50,7 @@ def turn(board)
   index = input_to_index(user_input)
   until valid_move?(board, index) == true
     user_input = gets.strip
+    index = input_to_index(user_input)
   end
   move(board, index)
   display_board(board)
