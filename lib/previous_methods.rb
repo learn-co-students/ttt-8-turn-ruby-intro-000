@@ -31,20 +31,3 @@ def position_taken?(board, index)
     false
   end
 end
-
-board = ["", "", "", "", "", "", "", "", ""]
-
-def turn(board)
-  display_board(board)
-  puts "Please enter 1-9:"
-  user_input = gets.strip
-  index = input_to_index(user_input)
-  if (valid_move?(board, index) == true)
-    move(board, index, player = "X")
-    display_board(board)
-  else
-    puts "Invalid move. Please try again!"
-    user_input = gets.strip
-  end
-end
-    
