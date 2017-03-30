@@ -28,13 +28,17 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = gets.strip.to_i
-  index = input - 1
+  user_input = gets.strip
+  index = input_to_index(user_input)
+
   if  valid_move?(board, index)
     move(board,index)
     display_board(board)
   else
-    puts "Please enter a number between 1 and 9"
     turn(board)
   end
+end
+
+def input_to_index(user_input)
+  index = user_input.to_i - 1
 end
