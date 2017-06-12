@@ -1,5 +1,3 @@
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -39,13 +37,12 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = input_to_index(gets.chomp)
+  index = input_to_index(gets.chomp)
 
-  if valid_move?(board, input)
-    move(board, input, token = "X")
+  if valid_move?(board, index)
+    move(board, index)
     display_board(board)
   else
-    puts "Please enter 1-9:"
-    input = input_to_index(gets.chomp)
+    turn(board)
   end
 end
