@@ -69,8 +69,16 @@ describe './lib/turn.rb' do
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
       move(board, 0, "O")
       move(board, 8, "X")
+      move(board, 4, "O")
 
-      expect(board).to eq(["O", " ", " ", " ", " ", " ", " ", " ", "X"])
+      expect(board).to eq(["O", " ", " ", " ", "O", " ", " ", " ", "X"])
+    end
+    it 'allows "X" player in the bottom right and "O" in the top left ' do
+      board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+      move(board, 0, "O")
+      move(board, 4, "O")
+
+      expect(board).to eq(["O", " ", " ", " ", "O", " ", " ", " ", " "])
     end
   end
 
@@ -111,6 +119,7 @@ describe './lib/turn.rb' do
 
       expect(self).to receive(:gets).and_return("1")
       expect(self).to receive(:valid_move?).with(board, 0).and_return(true)
+      
 
       turn(board)
     end
