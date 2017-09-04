@@ -1,1 +1,27 @@
 #!/usr/bin/env ruby
+
+require_relative("../lib/turn")
+
+board = [" "," "," ", " "," "," ", " "," "," "]
+
+puts "Welcome to Tic Tac Toe!"
+
+display_board(board)
+
+current_symbol = "X"
+#turns_made = 0
+
+#until turns_made == 9
+  turn(board, current_symbol)
+
+  if current_symbol == "X"
+    current_symbol = "0"
+  else
+    current_symbol = "X"
+  end
+
+  #turns_made += 1
+  #puts "Turns made: #{turns_made}"
+#end
+
+puts "Turn complete"
