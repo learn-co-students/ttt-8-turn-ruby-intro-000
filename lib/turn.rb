@@ -8,6 +8,7 @@ end
 def input_to_index(string)
  index=string.to_i-1
 end
+
 def position_taken?(board,index)
 if board[index]==""||board[index]==" "||board[index]==nil
   false
@@ -26,11 +27,13 @@ def move(board,index,value="X")
 end
 
 def turn(board)
+
+  "binding.pry"
   puts"Please enter 1-9:"
   string=gets.strip
   index=input_to_index(string)
   if valid_move?(board,index)
-  move(board,index,value)
+  move(board,index,"X")
   display_board(board)
   else
     turn(board)
