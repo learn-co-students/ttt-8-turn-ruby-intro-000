@@ -18,9 +18,8 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board,index,turn)
-  board[index] = turn
-  board
+def move(board,index,current_player = "X")
+  board[index] = current_player
 end
 
 def turn(board)
@@ -28,7 +27,8 @@ def turn(board)
   user_input = input_to_index(gets)
   #puts "Inputted: #{user_input}"
   if valid_move?(board,user_input)
-    display_board(move(board,user_input,"X"))
+    move(board,user_input)
+    display_board(board)
   else
     puts "Invalid Move"
     turn(board)
