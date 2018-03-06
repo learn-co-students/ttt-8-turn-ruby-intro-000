@@ -17,3 +17,10 @@ def display_board(board)
   return "#{@show_board}"
 end
 display_board(board)
+
+# convert user move to array format *TASK 2
+def input_to_index(d)
+  digit = d.to_i
+  digit -= 1
+  return digit
+end   
