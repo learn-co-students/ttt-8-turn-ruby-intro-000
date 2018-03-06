@@ -41,3 +41,8 @@ def position_taken?(board, index)
     true
   end
 end
+
+# create the move action to allow user to make a move *TASK 4
+def move(board, index, x)
+  board[index]=x
+end
