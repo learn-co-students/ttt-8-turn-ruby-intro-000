@@ -16,7 +16,7 @@ def display_board(board)
   @show_board=puts "#{@line1}"; puts"#{show_dashes}"; puts "#{@line2}"; puts"#{show_dashes}"; puts "#{@line3}"
   return "#{@show_board}"
 end
-display_board(board)
+#display_board(board)
 
 # convert user move to array format *TASK 2
 def input_to_index(d)
