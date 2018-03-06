@@ -23,4 +23,21 @@ def input_to_index(d)
   digit = d.to_i
   digit -= 1
   return digit
-end   
+end
+
+# check to see if the user makes a valid move *TASK 3
+def valid_move?(board, index) #in actual use, index would be really @move
+  if index.between?(0,8) && !position_taken?(board, index)
+    true
+  else
+    false
+  end
+end
+
+def position_taken?(board, index)
+  if (board[index] == " ") || (board[index] == "") || (board[index] == nil)
+    false
+  else
+    true
+  end
+end
