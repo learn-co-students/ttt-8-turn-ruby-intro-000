@@ -9,13 +9,6 @@ end
 
 display_board([" "," "," "," "," "," "," "," "," "])
 
-# valid_move? method
-def valid_move?(board, index)
-  if position_taken?(board,index) == false && index.between?(0,8)
-    return true
-  end
-end
-
 # re-defined #position_taken? method
 def position_taken?(board, index)
   if board[index] == " "
@@ -29,15 +22,24 @@ def position_taken?(board, index)
   end
 end
 
+# valid_move? method
+def valid_move?(board, index)
+  if position_taken?(board,index) == false && index.between?(0,8)
+    return true
+  end
+end
+
 # input_to_index method
 def input_to_index(input)
   input.to_i - 1
 end
 
+# move method
 def move(board, index, character = "X")
   board[index] = character
 end
 
+# turn method
 def turn(board)
   puts "Please enter 1-9:"
   #this method should take a number1-9 and use that as the user's move
