@@ -36,9 +36,23 @@ end
 
 #define turn board
 
+#Asking the user for their move by position 1-9.
+#Receiving the user input.
+#Convert position to an index.
+#If the move is valid, make the move and display the board to the user.
+#If the move is invalid, ask for a new move until a valid move is received.
+
+
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  input_to_index(input)
+  index = input_to_index(input)
+
+    if valid_move?(board,index)
+      move(board,index,value = "X")
+      display_board(board)
+    else
+      turn(board)
+    end
 
 end
