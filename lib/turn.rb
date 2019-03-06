@@ -2,7 +2,8 @@
 require 'pry'
 
 
-
+## that was a doozy, I had a recurssive turn(board) in there to get to the next turn.
+## in the future we will write a new method to handle turn taking 
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -69,6 +70,8 @@ def display_board(board)
   puts "-----------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
+
+## use nested if statements instead of logic threads ?
 
 def valid_move?(array, index)
   if index.between?(0,8)
