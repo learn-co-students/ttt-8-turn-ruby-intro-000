@@ -35,14 +35,13 @@ def position_taken?(array,index)
 end
 
 def turn(board)
-  puts "Please enter 1-9:"
-  input = gets
-  converted_input = input_to_index(input)
-  if valid_move?(board,converted_input) == false
-    until valid_move?(board,converted_input) == true
+    puts "Please enter 1-9:"
+    input = gets
+    converted_input = input_to_index(input)
+    if valid_move?(board,converted_input) == true
+      move(board,converted_input,"X")
+      puts display_board(board)
+    else
       turn(board)
     end
-  else move(board,converted_input,"X")
-  end
-  puts display_board(board)
 end
