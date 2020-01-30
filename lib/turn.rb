@@ -26,8 +26,8 @@ end
 
 #input_to_index
 
-def input_to_index(user_input)
-  user_input.to_i - 1
+def input_to_index(input)
+  input.to_i - 1
 end
 
 #move
@@ -56,4 +56,4 @@ def turn (board)
     display_board(board)
   else turn(board)
 end
-end 
+end
