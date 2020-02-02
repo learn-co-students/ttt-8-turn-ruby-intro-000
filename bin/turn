@@ -1,1 +1,12 @@
 #!/usr/bin/env ruby
+require_relative '../lib/turn.rb'
+
+puts "Welcome to Tic Tac Toe!"
+
+board=[" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+display_board(board)
+
+puts "Where would you like to make your first move? The board is numbered 1-9, the top left is 1 and the bottom right is 9."
+
+turn(board)
