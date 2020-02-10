@@ -5,17 +5,20 @@ def display_board(board)
 end
 
 def input_to_index(input)
-  user_input = input.strip.to_i - 1
+  user_input = input.to_i - 1
 end
 
 def valid_move?(board, index)
-  return false if index < 0 || index > 8
+  return false if index < 0
+  return false if index > 8
+  return false if board[index] == 'X'
+  return false if board[index] == 'O'
 
-  return false if board[index] == 'X' || board[index] == 'O'
-
-  # return true if board[index] == '   ' || board[index] == '' || board[index].nil?
-
-  true
+  if board[index] == ' ' || board[index] == '' || board[index].nil?
+    true
+  else
+    false
+  end
 end
 
 def move(board, index, position_character = 'X')
@@ -23,20 +26,29 @@ def move(board, index, position_character = 'X')
 end
 
 def turn(board)
+
+  puts board
+
   condition = true
   player_character = 'X'
   while condition
     puts 'Please enter 1-9:'
-
     input = gets.strip
     index = input_to_index(input)
-    next unless valid_move?(board, index)
+    if !valid_move?(board, index)
+      display_board(board)
+      next
+    end
 
-    puts(board)
-    condition = false
-    player_character = player_character == 'X' ? 'O' : 'X'
+    board[index] = player_character
+    display_board(board)
 
+    # condition = false
+    player_character = if player_character == 'X'
+                         'O'
+                       else
+                         'X'
+                       end
+    break
   end
-
-  puts board
 end
