@@ -22,8 +22,19 @@ def move(board, index, position_character = 'X')
   board[index] = position_character if valid_move?(board, index)
 end
 
-def turn(_board)
-  puts 'Please enter 1-9:'
-  input = gets.strip
-  index = input_to_index(input)
+def turn(board)
+  condition = true
+  player_character = 'X'
+  while condition
+    puts 'Please enter 1-9:'
+
+    input = gets.strip
+    index = input_to_index(input)
+    next unless valid_move?(board, index)
+
+    puts(board)
+    condition = false
+    player_character = player_character == 'X' ? 'O' : 'X'
+
+  end
 end
