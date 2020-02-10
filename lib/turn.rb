@@ -37,4 +37,6 @@ def turn(board)
     player_character = player_character == 'X' ? 'O' : 'X'
 
   end
+
+  puts board
 end
