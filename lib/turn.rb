@@ -1,8 +1,8 @@
-board = [" 0 ", " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 "]
+
 # This method should accept a board as an argument 
 # and print out the current state of the board for the user.
 def display_board(board)
-    puts "#{board[0]} | #{board[1]} | #{board[2]}"
+    puts " #{board[0]} | #{board[1]} | #{board[2]} "
     puts "-----------"
     puts " #{board[3]} | #{board[4]} | #{board[5]} "
     puts "-----------"
@@ -13,7 +13,6 @@ end
 # from the user and return true if the index is 
 # within the correct range of 0-8 and is currently 
 # unoccupied by an X or O token.
-if position_taken?(board, index)
 def valid_move?(board, index)
     if position_taken?(board, index) 
         return false
@@ -57,8 +56,8 @@ def turn(board)
     index = input_to_index(input)
     if valid_move?(board, index) 
         move(board, index, character = "X")
-        display_board(board)
+        display_board(board) 
     else 
-        input = gets.strip 
+        turn(board)
     end 
 end
