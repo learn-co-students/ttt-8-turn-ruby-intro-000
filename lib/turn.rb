@@ -10,25 +10,27 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  valid_move?(board, index)
-  turn(board)
+  if valid_move?(board, index) == true
+    display_board(board)
+  else
+    turn(board)
+  end
 end
 
 def input_to_index(input)
   index = input.to_i - 1
 end
 
-def move(array, index, player)
+def move(array, index, player = "X")
   array[index] = player
 end
 
 # code your #valid_move? method here
 def valid_move?(array, index)
   if index.between?(0, 8) == true && position_taken?(array, index) == false
-    #move(board, index, "X")
+    move(array, index, "X")
     true
   else
-    #turn(board)
     false
   end
 end
