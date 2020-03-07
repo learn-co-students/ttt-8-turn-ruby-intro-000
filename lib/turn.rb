@@ -5,7 +5,6 @@ def display_board(board)
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
   puts "-----------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
-  puts "-----------"
 end
 
 def input_to_index(input)
@@ -39,7 +38,6 @@ def turn(board)
   if valid_move?(board, index) == true
     move(board, index, "X")
     display_board(board)
-    turn(board)
   else
     turn(board)
   end
