@@ -40,17 +40,10 @@ def turn(board)
   index = gets.strip
   converted_index = input_to_index(index)
   
-  loop do
-    if valid_move?(board, converted_index) == true
-      move(board, converted_index, )
-      display_board(board)
-      break
-    else
-      display_board(board)
-      puts "Please enter 1-9:"
-      index = gets.strip
-      index.to_i
-      converted_index = input_to_index(index)
-    end
+  if valid_move?(board, converted_index) == true
+    move(board, converted_index, )
+    display_board(board)
+  else
+    turn(board)
   end
 end
