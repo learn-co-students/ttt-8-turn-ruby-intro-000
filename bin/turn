@@ -1,1 +1,10 @@
 #!/usr/bin/env ruby
+require_relative '../lib/turn'
+
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]#required to play the game
+
+puts "Welcome to Tic Tac Toe!"# to greet our player
+
+display_board(board)# to call the method that displays the board
+
+turn(board)# this calls our turn method in /lib to make the turn.
