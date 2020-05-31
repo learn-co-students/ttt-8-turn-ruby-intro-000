@@ -37,7 +37,7 @@ def turn(board)
   if valid_move?(board, index) == true
     move(board, index, token)
   else
-    "Please enter a valid number that has not been played."
-      end
+    turn(board)
+  end
 end
 
