@@ -15,12 +15,11 @@ def turn(board)
   index=input_to_index(input)
   if valid_move?(board,index)
     move(board, index)
+      display_board(board)
   else
-  puts "Please enter 1-9:"
-   input=gets.strip
+  turn(board)
 end
 
-  display_board(board)
 
 end
 
@@ -49,15 +48,18 @@ end
 
 
 
-
 def update_array_at_with(array, index, value)
   array[index] = value
 end
+
+
 
 def input_to_index(input)
   input.to_i - 1
 
 end
+
+
 
 def move(board, input, character="X")
 board[input]=character
