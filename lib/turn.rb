@@ -26,6 +26,14 @@ def move(board, index, value)
   return board[index] = value
 end
 
+
+def turn(board)
+  puts "Please enter 1-9:"
+  
+end
+
+
+=begin
 def turn(board)
   puts "Please enter 1-9:"
   index = gets.strip.to_i - 1
@@ -36,4 +44,4 @@ def turn(board)
     puts "This is not a valid move. Try again."
 
   end
-end
+=end
