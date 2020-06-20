@@ -5,11 +5,26 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 puts "Welcome to Tic Tac Toe!"
 
-move(board, index, value)
+#move(board, 4, "O")
+#move(board, 0, "X")
 
 display_board(board)
 
 turn(board)
+#turn(board)
+#turn(board)
+#turn(board)
+#turn(board)
+#turn(board)
+#turn(board)
+#turn(board)
+#turn(board)
+
+
+
+#move(board, index)
+
+#display_board(board)
 
 #valid_move?(board, index)
 
