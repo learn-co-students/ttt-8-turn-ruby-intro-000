@@ -35,22 +35,7 @@ def turn(board)
   if valid_move?(board, index) == true
     move(board, index, value)
     display_board(board)
-    #return move(board.replace, index.replace, value.replace)
   else
     turn(board)
   end
 end
-
-
-=begin
-def turn(board)
-  puts "Please enter 1-9:"
-  index = gets.strip.to_i - 1
-  if board[index] == valid_move(board, index)
-    return move(board, index, value)
-
-  if board[index] != valid_move(board, index)
-    puts "This is not a valid move. Try again."
-
-  end
-=end

@@ -11,25 +11,7 @@ puts "Welcome to Tic Tac Toe!"
 display_board(board)
 
 turn(board)
-#turn(board)
-#turn(board)
-#turn(board)
-#turn(board)
-#turn(board)
-#turn(board)
-#turn(board)
-#turn(board)
-
-
-
-#move(board, index)
-
-#display_board(board)
-
-#valid_move?(board, index)
-
-#users_input = gets.strip
-
-#index = input_to_index(users_input)
-
-#input_to_index(users_input)
+turn(board)
+turn(board)
+turn(board)
+turn(board)
