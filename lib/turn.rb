@@ -23,9 +23,7 @@ def valid_move?(board, index)
 end
 
 def move(board, index, value = "X")
-  # array.replace(["x", "y"])
-  return display_board(board)
-  #return display_board.replace([board, index, value])
+  board[index] = value
 end
 
 
@@ -35,10 +33,11 @@ def turn(board)
   index = input_to_index(users_input)
   value = "X"
   if valid_move?(board, index) == true
-    return move(board, index, value)
+    move(board, index, value)
+    display_board(board)
     #return move(board.replace, index.replace, value.replace)
   else
-    return turn(board)
+    turn(board)
   end
 end
 
