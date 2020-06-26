@@ -16,7 +16,7 @@ A turn of Tic Tac Toe is composed of the following routine:
 1. Asking the user for their move by position 1-9.
 2. Receiving the user input.
 3. Convert position to an index.
-4. If the move is valid, make the move and display the board to the user.
+4. If the move is valid, mhttps://learn.co/tracks/introduction-to-ruby/ruby-basics/loops/tic-tac-toe-turn#ake the move and display the board to the user.
 5. If the move is invalid, ask for a new move until a valid move is received.
 
 All these procedures will be wrapped into our `#turn` method. However, the majority of the logic for these procedures will be defined and encapsulated in individual methods (some of which you may have built previously).
