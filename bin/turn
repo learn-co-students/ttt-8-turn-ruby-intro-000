@@ -3,12 +3,17 @@ require_relative '../lib/turn'
 
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-puts "Welcome to Tic Tac Toe!"
+#puts "Welcome to Tic Tac Toe!"
 
 
 #move(board, index, char = "X")
 
+<<<<<<< HEAD
 display_board(board)
 turn(board)
+=======
+#display_board(board)
+#turn(board)
+>>>>>>> 831c7a2c4d2dde7836df2be1a5e5e77bcb3ccb41
 
 

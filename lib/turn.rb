@@ -52,7 +52,11 @@ end
 
 
 
+<<<<<<< HEAD
 def turn(board)
+=======
+def turn(board)
+>>>>>>> 831c7a2c4d2dde7836df2be1a5e5e77bcb3ccb41
  #board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
  puts "Please enter 1-9:"
  input = gets.strip
@@ -60,7 +64,11 @@ def turn(board)
  
   if valid_move?(board, value)
   
+<<<<<<< HEAD
   move(board, value, "X")
+=======
+  move(board, value, char = "X")
+>>>>>>> 831c7a2c4d2dde7836df2be1a5e5e77bcb3ccb41
    
   else
     turn(input)
