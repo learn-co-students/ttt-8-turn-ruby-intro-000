@@ -52,7 +52,7 @@ end
 
 
 
-def turn(user_input)
+def turn(board)
  #board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
  puts "Please enter 1-9:"
  input = gets.strip
@@ -60,7 +60,7 @@ def turn(user_input)
  
   if valid_move?(board, value)
   
-  move(board, value, char = "X")
+  move(board, value, "X")
    
   else
     turn(input)
