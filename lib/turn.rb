@@ -1,3 +1,4 @@
+require "pry"
 def display_board (board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -12,18 +13,25 @@ def input_to_index(input)
   return index
 end
 
-def position_taken?(board, index)
-  taken = board[index] == "X" || "O"
-return taken
+def position_available?(board, index)
+  binding.pry
+  if board[index] == "X" || "O"
+    available = false
+  else
+    available = true
+  end
+    return available
 end
 
-def valid_range?(board, index)
-  good_range = board[index] >= 0 && board[index] < 9
+def valid_range?(index)
+   #binding.pry
+  good_range = index >= 0 && index < 9
 return good_range
 end
 
 def valid_move?(board, index)
-valid = (!position_taken?(board, index) && valid_range?(board, index))
+  #binding.pry
+valid = (position_available?(board, index) && valid_range?(index))
 end
 
 def move(board, index, character = "X")
