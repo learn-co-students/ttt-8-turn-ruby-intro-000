@@ -43,9 +43,9 @@ valid = (position_available?(board, index) && valid_range?(index))
 end
 
 def move(board, index, character = "X")
-  if valid_move?(board, index)
+  #if valid_move?(board, index)
     board[index] = character
-  end
+#  end
 end
 
 def turn(board)
@@ -53,12 +53,12 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
 
-  until valid_move?(board, index)
+  while !valid_move?(board, index)
     puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
-  end
-  binding.pry
+ end
+  #binding.pry
   move(board, index, character = "X")
   display_board(board)
 end
