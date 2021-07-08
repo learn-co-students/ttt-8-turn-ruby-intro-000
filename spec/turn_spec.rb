@@ -1,4 +1,5 @@
 require_relative "../lib/turn.rb"
+require_relative "./spec_helper.rb"
 
 describe './lib/turn.rb' do
 
